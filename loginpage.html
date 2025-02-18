@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>
+            login page
+        </title>
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body class=" flex  text-center justify-center   bg-blue-400 content-center  " >
+        <div class= " shadow-2xl flex-col  bg-amber-50 text-center border-2  justify-center border-black rounded-2xl items-center  mt-50 mb-50">
+            <h1 class="text-cyan-950 font-extrabold text-5xl"> Login page</h1>
+            <input class="m-8 h-15 w-70 p-5 border-black border-2 shadow-2xl" type="text" id="uname" placeholder=" enter username">
+            <br>
+            <input class="m-8 h-15 w-70 p-5 border-black border-2 shadow-2xl" type="text" id="pwd" placeholder=" enter password">
+    
+        <br>
+        <button class=" bg-blue-300 h-15 w-70 p-5 border-black  rounded-2xl border-2 shadow-2xl"onclick="login()">login</button>
+        <h1  id="msg"> </h1>
+        </div>
+        
+<script>
+    function login(){
+
+        var uname = document.getElementById("uname").value;
+        var pwd = document.getElementById("pwd").value;
+        var h1 = document.getElementById("msg"); 
+
+        if(uname==""){
+            h1.innerHTML="please fill username first"
+            return
+        }
+        if(pwd==""){
+            h1.innerHTML="please fill password first"
+         } 
+         else if( uname=="nidhipawar" && pwd=="6267"){
+            h1.innerHTML = "login success"
+
+         }
+         else{
+            h1.innerHTML="login failed"
+         } 
+    }
+</script>
+    </body>
+</html>

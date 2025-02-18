@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body   class="flex flex-col justify-center bg-blue-200 items-center">
+    <h1 class="text-3xl items-center  text-black text-center mt-10">array search</h1>
+    <div class=" flex-col items-center justify-center mt-10 border-b-black" >
+        <input class="h-10 w-70 p-3   border-amber-800 border-2" id="student" onkeyup="filterstudent()" type="text" placeholder="search"> 
+    </div>
+        <div  class="mt-5   h-10 w-70 text-center style-none text-black "id="list">
+      </div>
+    
+
+        
+             </div>
+             <script>
+                var students = ["ram","raj","aman","ajay","rajni","ritu","shivani"]
+                var listElement=document.getElementById("list")
+                setModifiedDataInList(students)
+
+
+                function filterstudent (){
+                    var inputValue=document.getElementById("student").value                      
+                    var modified=students.filter(
+         (studentName) =>studentName.toLowerCase().startsWith(inputValue) )
+                    setModifiedDataInList(modified)
+                }
+
+                function setModifiedDataInList(modifiedArray){
+                    listElement.innerHTML=modifiedArray.map((v)=>"<li>"+v+"</li>")
+                }
+    </script>
+    
+</body>
+</html>
