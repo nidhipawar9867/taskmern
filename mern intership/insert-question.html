@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <div class=" flex flex-col items-center justify-center mt-5   mr-10 ml-10 bg-gray-400">
+    <div class=" items-center flex-col bg-gray-400  mt-10 mb-5 flex justify-center">
+    <textarea class="h-30  p-10 w-200 border-2 " id="que"></textarea> 
+    </div>
+    <div class="items-center flex ML-4 justify-between">
+   1. <input class="h-10 p-3 mb-5  bg-blue-50 w-70" type="text" id="op1">
+   2. <input class="h-10  p-3 mb-5  bg-amber-50 w-70" type="text" id="op2">
+   3. <input  class=" h-10 p-3  mb-5  bg-amber-50 w-70"type="text" id="op3">
+    4.<input class="h-10 p-3  mb-5  bg-amber-50 w-70" type="text" id="op4">
+    ANS. <input class="h-10  p-3 mb-5  bg-amber-50 w-70" type="text"id="ans">
+    </div>
+    <div class="flex items-center justify-center">
+    <button class="h-10 mr-10  border-2 w-30" onclick="saveQue()">save</button>
+    <button class="h-10   border-2 w-30" onclick="showTest()">show</button>
+    </div>
+    </div>
+    <div id="show"></div>
+
+    <script src="questions.js"></script>
+
+</body>
+</html>

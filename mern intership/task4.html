@@ -1,0 +1,50 @@
+<html>
+    <head> 
+        <title>
+            calculator
+        </title>
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+<link rel="stylesheet"  href="style.css">
+
+    </head>
+    <body class="flex  justify-center items-center bg-blue-200">
+        <div class="flex-col justify-between items-center bg-amber-50 border-2 shadow-xl "> 
+            <div class= " flex-col text-center  justify-center justify-items-center ">
+                <h1 class="text-cyan-950 font-extrabold text-5xl"> calculator</h1>
+                <input class="m-8 h-15 w-70 p-5 border-cyan-950 rounded-2xl  bg-blue-200  border-2 hadow-2xl" type="text" id="input1" placeholder=" first number">
+                <br>
+                <input class="m-8 h-15 w-70 p-5 border-cyan-950 rounded-2xl  bg-blue-200  border-2 shadow-2xl" type="text" id="input2" placeholder=" second number">
+                
+            <br>
+            </div>
+            <button onclick="add()"class="m-5 shadow-xl  border-2 py-2.5 px-4 ">+</button>
+            <button onclick="sub()"class="m-5 shadow-xl  border-2 py-2.5 px-4 ">-</button> 
+            <button onclick="mul()"class="m-5 shadow-xl border-2 py-2.5 px-4 ">*</button> 
+            <button onclick="div()"class="m-5 shadow-xl  border-2 py-2.5  px-4">/</button>
+            <h1 class="text-3xl text-black text-center mt-5" id="result"> This is Ans</h1>
+
+        </div>
+        <script>
+            var input1=document.getElementById("input1");
+            var input2=document.getElementById("input2");
+            var result=document.getElementById("result");
+            function add(){
+            result.innerHTML=parseInt(input1.value)+parseInt(input2.value)
+
+            }
+            function sub(){
+                result.innerHTML=parseInt(input1.value)-parseInt(input2.value) 
+
+            } 
+            function mul(){
+            result.innerHTML=parseInt(input1.value)*parseInt(input2.value)
+
+            } function div(){
+            result.innerHTML=parseInt(input1.value)/parseInt(input2.value)
+
+            }
+
+
+        </script>
+    </body>
+</html>

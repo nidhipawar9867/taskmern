@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>
+            login page
+        </title>
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body class=" flex  text-center justify-center   content-center  " >
+        <div class= " shadow-2xl shadow-black flex-col   text-center border-2  justify-center border-black  p-8 items-center h-[85vh] mt-30 mb-50">
+            <h1 class="text-cyan-950 font-semibold text-3xl mb-3 mt-4">Register/sign up</h1>
+            <input class="m-4 h-13 w-70 p-5 border-black border-2 shadow-2xl" type="text" id="uname" placeholder=" enter username">
+            <br>
+            <input class="m-4 h-13 w-70 p-5 border-black border-2 shadow-2xl" type="text" id="name" placeholder=" enter name">
+            <br>
+            <input class="m-4 h-13 w-70 p-5 border-black border-2 shadow-2xl" type="text" id="mob" placeholder=" mobile number">
+            <br>
+            <input class="m-4 h-13 w-70 p-5 border-black border-2 shadow-2xl" type="text" id="pwd" placeholder=" enter password">
+            <br>
+            <div>
+            <h1 class="text-left ml-5 mb-4">Register Type<h1> 
+                <input  class="h-4 " type="radio" onclick=""  name=" admin" id="Admin">Admin
+                <input  class="h-4  ml-6" type="radio" onclick=""  name="admin" id="student">Student
+            </div>
+    
+        <button class=" bg-black h-9 w-40  mt-7  border-black  text-amber-50  border-2 shadow-2xl" onclick=""> Register as Admin</button>
+        <button class=" bg-black h-9 w-40  mt-7  border-black text-amber-50  ml-3 border-2 shadow-2xl" onclick=""> Register as Student</button><br>
+        <div class="h-20 w-50 mr-30">
+        <a href="register.html"><button class=" bg-black h-9 w-20 mt-7  text-amber-50 shadow-2xl "onclick="">Register</button></a>
+        <a href="loginpage.html"><button class=" bg-black h-9 w-20 mt-7 shadow-2xl  text-amber-50 mr-3 "onclick="">Login</button></a>
+        </div> 
+        </div>
+        <script>
+            function registerUser(){
+                let username=document.getElementById("username").value;
+                let name=document.getElementById("name").value;
+                let mobile=document.getElementById("mob").value;
+                let password=document.getElementById("pwd").value;
+                let admin=document.getElementById("admin").value;
+                let student=document.getElementById("student").value;
+
+                if( username && name && mobile && password && admin && student){
+                    let userdata = {
+                        username: username,
+                        name: name,
+                        mobile: mobile,
+                        password:password,
+                        admin:admin,
+                        student:student
+
+                    }
+                }
+
+            }
+        </script>
+        </body>
+</html>
+    
