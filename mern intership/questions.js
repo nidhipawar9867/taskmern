@@ -26,7 +26,7 @@ function saveQue() {
 function showQuestions() {
     listOfQue = JSON.parse(localStorage.getItem("questions"))
     document.getElementById("show").innerHTML = listOfQue.map((que) => `
-    <div style="box-shadow: 1px 1px 5px 1px gray; margin:25px; padding:25px">
+    <div style="box-shadow: 1px 1px 5px 1px   gray; margin:40px; padding:25px">
         <h1>${que.quesion}</h1>
         <h3>${que.a}</h3>
         <h3>${que.b}</h3>
@@ -47,7 +47,7 @@ function showTest() {
         
     </div>
     `).join("") 
-    + "<button 'style='margin-top:20px ' onclick='submit()'>submit</button>"
+    + "<button 'style='margin-top:30px ' onclick='submit()'>submit</button>"
 }
 
 function selectOption(index, ansValue){

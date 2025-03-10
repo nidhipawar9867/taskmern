@@ -8,50 +8,28 @@
         <link rel="stylesheet" href="style.css">
 
     </head>
-    <body class=" flex  text-center justify-center    content-center  " >
-        <div class= " shadow-2xl shadow-black flex-col   text-center border-2  justify-center border-black p-1 items-center h-[65vh] mt-30 mb-50">
-            <h1 class="text-cyan-950 font-semibold text-4xl mt-5"> Login page</h1>
-            <input class="m-8 h-10 w-70 p-5 border-black border-2 shadow-2xl" type="text" id="uname" placeholder=" enter username">
+    <body class=" flex  text-center justify-center bg-blue-950  content-center  " >
+        <div class= " shadow-2xl shadow-black flex-col   text-center border-2  rounded-2xl justify-center border-blue-800 p-1 items-center h-[60vh] mt-30 ">
+            <h1 class="text-white font-semibold text-3xl mt-5"> Login page</h1>
+            <input class="m-4 h-3 w-70 p-5 border-blue-800 rounded-2xl text-white border-2 shadow-2xl" type="text" id="userNameLogin" placeholder=" enter username">
             <br>
-            <input class="m-8 h-10 w-70 p-5 border-black border-2 shadow-2xl" type="text" id="pwd" placeholder=" enter password">
+            <input class="m-4 h-3 w-70 p-5 border-blue-800 rounded-2xl border-2 text-white" type="text" id="passwordLogin" placeholder=" enter password">
     
         <br>
         <div  class=" flex flex-col     h-[10vh] ">
-            <h1 class=" mb-4 text-right  mr-55 text-gray-400 SM:text-2xl ">Login Type<h1> 
-            <input class="h-5 border-2 bg-blue-400 items-center mr-7  shadow-2xl ml-6" type="radio" onclick=""  name=" admin" id="Admin">Admin
-            <input  class="h-5 border-2 bg-blue-300  items-center mr-7 shadow-2xl ml-6" type="radio" onclick=""  name="admin" id="student">Student
+            <h1 class=" mb-3 text-right  mr-50 text-white SM:text-2xl ">Login Type<h1> 
+            <input class="h-5 border-2 bg-white items-center mr-7 text-white shadow-2xl ml-6" type="radio" onclick="checkAdminStudent() "  name="admin" id="adminLogin">Admin
+            <input  class="h-5 border-2 bg-white  items-center mr-7  text-white shadow-2xl ml-6" type="radio" onclick="checkAdminStudent()"  name="admin" id="studentLogin">Student
 
     
         </div>
-        <button class=" bg-black h-9 w-30  mt-7  border-black  text-amber-50 shadow-2xl" onclick="login()">login</button>
+        <button class=" bg-black h-9 w-30  mt-7  border-black rounded-2xl text-amber-50 shadow-2xl" onclick="login()">login</button>
         <h1  id="msg"> </h1>
-        <p class="mt-4">Don't have an account?<a href="register.html"><span class=" text-blue-300 ml-2">Register Here</span></a></p>
+        <p class="mt-4  text-white">Don't have an account?<a href="register.html"><span class=" text-blue-400 ml-2">Register Here</span></a></p>
         </div>
+        <h1  id=""> </h1>
+        <script src="script2.js"></script>
 
-    
-        
-<script>
-    function login(){
-
-        var uname = document.getElementById("uname").value;
-        var pwd = document.getElementById("pwd").value;
-        var h1 = document.getElementById("msg"); 
-
-        if(uname==""){
-            h1.innerHTML="please fill username first"
-            return
-        }
-        if(pwd==""){
-            h1.innerHTML="please fill password first"
-         } 
-         else if( uname=="nidhipawar" && pwd=="6267"){
-            h1.innerHTML = "login success"
-
-         }
-         else{
-            h1.innerHTML="login failed"
-         } 
-    }
-</script>
     </body>
-</html>
+</html>                                                              
+                                            

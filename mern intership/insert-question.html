@@ -9,24 +9,27 @@
 
 
 </head>
-<body>
-    <div class=" flex flex-col items-center justify-center mt-5   mr-10 ml-10 bg-gray-400">
-    <div class=" items-center flex-col bg-gray-400  mt-10 mb-5 flex justify-center">
-    <textarea class="h-30  p-10 w-200 border-2 " id="que"></textarea> 
+<body class="bg-blue-950 text-white">
+    <div class=" flex flex-col items-center justify-center  rounded-2xl contain-center w-[50vw] shadow-black   mt-20 h-95 ">
+    <div class=" items-center flex-col border-2 border-blue-800  mt-10  flex shadow-1xl shadow-black justify-center">
+    <textarea class="h-10  mr-3 ml-3 mt-5 w-[25vw] border-2 text-white rounded-2xl border-blue-800" id="que"></textarea> 
+    
+    
+   1. <input class="h-5 p-3 mb-2 ml-4  mr-2 shadow-2xl shadow-black border-2 rounded-2xl  border-blue-800 w-60" type="text" id="op1">
+   2. <input class="h-5  p-3 mb-2 ml-4  mr-2 shadow-2xl shadow-black  border-2 rounded-2xl border-blue-800 w-60" type="text" id="op2">
+   3. <input  class=" h-5 p-3 ml-4 mb-2 mr-2 shadow-2xl shadow-black border-2   rounded-2xl border-blue-800 w-60"type="text" id="op3">
+    4.<input class="h-5 p-3 ml-4 mb-2  mr-2 shadow-2xl shadow-black  border-2 rounded-2xl border-blue-800 w-60" type="text" id="op4">
+    ANS. <input class="h-5 p-3 mb-2 ml-4 mr-2 shadow-2xl shadow-black  border-blue-800 rounded-2xl border-2 w-60" type="text"id="ans">
+
+    
+    <div class="text-center ">
+    <button class="h-10  shadow-2xl shadow-black bg-black  rounded-2xl  text-amber-50 w-30" onclick="saveQue()">save</button>
+    <button class="h-10  ml-10 shadow-2xl shadow-black bg-black rounded-2xl text-amber-50 w-30"  onclick="showTest()">show</button>
     </div>
-    <div class="items-center flex ML-4 justify-between">
-   1. <input class="h-10 p-3 mb-5  bg-blue-50 w-70" type="text" id="op1">
-   2. <input class="h-10  p-3 mb-5  bg-amber-50 w-70" type="text" id="op2">
-   3. <input  class=" h-10 p-3  mb-5  bg-amber-50 w-70"type="text" id="op3">
-    4.<input class="h-10 p-3  mb-5  bg-amber-50 w-70" type="text" id="op4">
-    ANS. <input class="h-10  p-3 mb-5  bg-amber-50 w-70" type="text"id="ans">
+    
+    
+    <div id="show" class=""></div>
     </div>
-    <div class="flex items-center justify-center">
-    <button class="h-10 mr-10  border-2 w-30" onclick="saveQue()">save</button>
-    <button class="h-10   border-2 w-30" onclick="showTest()">show</button>
-    </div>
-    </div>
-    <div id="show"></div>
 
     <script src="questions.js"></script>
 
